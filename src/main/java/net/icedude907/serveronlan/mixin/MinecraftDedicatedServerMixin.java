@@ -24,7 +24,6 @@ import net.icedude907.serveronlan.LanServerPinger;
 import net.minecraft.resource.ResourcePackManager;
 import net.minecraft.resource.ServerResourceManager;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.ServerNetworkIo;
 import net.minecraft.server.WorldGenerationProgressListenerFactory;
 import net.minecraft.server.dedicated.DedicatedServer;
 import net.minecraft.server.dedicated.MinecraftDedicatedServer;
@@ -64,7 +63,7 @@ public abstract class MinecraftDedicatedServerMixin
         target="Lnet/minecraft/server/MinecraftServer;getNetworkIo()Lnet/minecraft/server/ServerNetworkIo;)"*/
         at = @At("TAIL")
     )
-    public void setupLAN(CallbackInfo/*Returnable<ServerNetworkIo>*/ ci){
+    public void setupLAN(CallbackInfoReturnable<Boolean> ci){
         lanPort = this.getPort();
         boolean result = openToLan(lanPort);
         TranslatableText text = result ? new TranslatableText("commands.publish.started", lanPort) : new TranslatableText("commands.publish.failed");
