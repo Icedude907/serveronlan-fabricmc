@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "serveronlan",
+  "version": "1.0.0",
+
+  "name": "Server on LAN",
+  "description": "Advertises a server on the LAN network aswell!",
+  "authors": [
+    "Icedude_907"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "environment": "server",
+  "entrypoints": {
+    "main":[
+
+    ],
+    "server": [
+      
+    ]
+  },
+  "mixins": [
+    "serveronlan.mixins.json"
+  ],
+
+  "depends": {},
+  "suggests": {}
+}

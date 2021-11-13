@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.icedude907.serveronlan.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixin":[
+
+  ],
+  "server": [
+    "MinecraftDedicatedServerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
